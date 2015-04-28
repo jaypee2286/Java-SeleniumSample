@@ -21,7 +21,7 @@ public class TC001 {
 	public OR_Bing BingRepo;
 	
 	@Before
-	public void beforeMethod() throws Exception {
+	public void init() throws Exception {
 		//Set log4j layout
 		DOMConfigurator.configure("log4j.xml");
 		

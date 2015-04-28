@@ -17,7 +17,7 @@ public class OR_Bing {
 	public static WebDriver driver;
 	public static String element;
 	
-	public By resultsBox = By.id("b_resultss");
+	public By resultsBox = By.id("b_results");
 			
 	public OR_Bing(WebDriver driver){
 		OR_Bing.driver = driver;
