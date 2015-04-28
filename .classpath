@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="C:/Users/john_canlas/Desktop/Work/Workspace/jars/junit-4.11.jar"/>
+	<classpathentry kind="lib" path="C:/Users/john_canlas/Desktop/Work/Workspace/jars/junit-dep-4.11.jar"/>
+	<classpathentry kind="lib" path="C:/Users/john_canlas/Desktop/Work/Workspace/jars/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/john_canlas/Desktop/Work/Workspace/jars/poi-3.11-20141221.jar"/>
+	<classpathentry kind="lib" path="C:/Users/john_canlas/Desktop/Work/Workspace/jars/selenium-java-2.44.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/john_canlas/Desktop/Work/Workspace/jars/selenium-java-2.44.0-srcs.jar"/>
+	<classpathentry kind="lib" path="C:/Users/john_canlas/Desktop/Work/Workspace/jars/selenium-server-standalone-2.45.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/john_canlas/Desktop/Work/Workspace/jars/testng-6.8.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/john_canlas/Desktop/Work/Workspace/jars/testng-6.8.21.jar"/>
+	<classpathentry kind="lib" path="C:/Users/john_canlas/Desktop/Work/Workspace/jars/testng-6.8.21-sources.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
