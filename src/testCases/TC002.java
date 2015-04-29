@@ -41,7 +41,7 @@ public class TC002 {
 		BingRepo.button_Search().click();
 		
 		//Verify that a list of results was returned using assertTrue and verifyObj method
-		assertTrue("Results Box does not exist!", ObjectUtils.verifyObj(driver, BingRepo.resultsBox));
+		//assertTrue("Results Box does not exist!", ObjectUtils.verifyObj(driver, BingRepo.resultsBox));
 		
 		//Verify that a list of results was returned using ExpectedConditions
 		new WebDriverWait(driver, 5).until(ExpectedConditions.presenceOfElementLocated(BingRepo.resultsBox));

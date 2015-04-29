@@ -14,11 +14,16 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.junit.*;
+import org.junit.rules.ErrorCollector;
 
 public class TC001 {
 	
 	public WebDriver driver;
 	public OR_Bing BingRepo;
+	public ObjectUtils utils;
+	
+	@Rule
+	public ErrorCollector errorCollector = new ErrorCollector();
 	
 	@Before
 	public void init() throws Exception {
@@ -41,14 +46,18 @@ public class TC001 {
 		BingRepo.button_Search().click();
 		
 		//Verify that a list of results was returned using assertTrue and verifyObj method
-		assertTrue("Results Box does not exist!", ObjectUtils.verifyObj(driver, BingRepo.resultsBox));
-		
+		//assertTrue("Results Box does not exist!", ObjectUtils.verifyObj(driver, BingRepo.resultsBox));
+		By results = By.id("BLAH");
+		ObjectUtils utils = new ObjectUtils();
+		System.out.println("A");
 		//Verify that a list of results was returned using ExpectedConditions
-		new WebDriverWait(driver, 5).until(ExpectedConditions.presenceOfElementLocated(BingRepo.resultsBox));
+		//new WebDriverWait(driver, 5).until(ExpectedConditions.presenceOfElementLocated(BingRepo.resultsBox));
+		utils.checkExistence("Results page not found!", results, driver);
+		System.out.println("B");
 	}
 	  
 	@After
 	public void afterMethod() throws Exception {
 		driver.close();
-	}	
+	}
 }
