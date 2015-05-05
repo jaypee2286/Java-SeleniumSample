@@ -1,0 +1,7 @@
+<suite name = "Test NG Suite Sample">
+	<test name = "Bing Search Test">
+		<classes>
+			<class name = "testCases.TestNG_TC001"/>
+		</classes>
+	</test>
+</suite>
