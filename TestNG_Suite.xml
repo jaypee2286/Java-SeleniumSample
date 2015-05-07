@@ -2,6 +2,7 @@
 	<test name = "Bing Search Test">
 		<classes>
 			<class name = "testCases.TestNG_TC001"/>
+			<class name = "testCases.TestNG_TC002"/>
 		</classes>
 	</test>
 </suite>

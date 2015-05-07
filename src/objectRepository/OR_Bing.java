@@ -17,7 +17,7 @@ public class OR_Bing extends Base {
 	public static String element;
 	
 	//BY variables can be used...
-	public static By resultsBox = By.id("b_results");
+	public static By resultsBox = By.id("b_resultss");
 	
 	public OR_Bing(WebDriver driver){
 		super(driver);

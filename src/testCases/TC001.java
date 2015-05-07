@@ -54,7 +54,7 @@ public class TC001 {
 			Log.info("Verified search results box loaded.");
 			
 		} catch (Exception e) {
-			ObjectUtils.captureScreenshot(driver);
+			ObjectUtils.captureScreenshot(driver, "JunitScreenshot");
 		}
 	}
 	  

@@ -12,5 +12,7 @@
 	<classpathentry kind="lib" path="C:/Users/john_canlas/Desktop/Work/Workspace/jars/testng-6.8.5.jar"/>
 	<classpathentry kind="lib" path="C:/Users/john_canlas/Desktop/Work/Workspace/jars/testng-6.8.21.jar"/>
 	<classpathentry kind="lib" path="C:/Users/john_canlas/Desktop/Work/Workspace/jars/testng-6.8.21-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/john_canlas/Desktop/Work/Workspace/jars/extentreports-java-1.4.jar"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

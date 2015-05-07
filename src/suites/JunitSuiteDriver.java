@@ -15,4 +15,7 @@ import testCases.*;
 @SuiteClasses({TC001.class})
 public class JunitSuiteDriver {
 
+	public static void main(String[] args){
+		
+	}
 }
