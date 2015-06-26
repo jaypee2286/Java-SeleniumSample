@@ -1,8 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <suite name = "Test NG Suite Sample">
-	<test name = "Bing Search Test">
+	<test name = "SeleniumSample Test">
 		<classes>
-			<class name = "testCases.TestNG_TC001"/>
-			<class name = "testCases.TestNG_TC002"/>
+			<class name = "testCases.TestLogin"/>
 		</classes>
 	</test>
 </suite>

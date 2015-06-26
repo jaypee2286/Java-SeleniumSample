@@ -50,11 +50,11 @@ public class TC001 {
 			Log.info("Inputted 'Google Chrome' in the search field and clicked the search button.");
 			
 			//Verify that a list of results was returned using assertTrue and verifyObj method
-			assertTrue("Results Box does not exist!", ObjectUtils.verifyObj(OR_Bing.resultsBox));
+			assertTrue("Results Box does not exist!", Utils.verifyObj(OR_Bing.resultsBox));
 			Log.info("Verified search results box loaded.");
 			
 		} catch (Exception e) {
-			ObjectUtils.captureScreenshot(driver, "JunitScreenshot");
+			Utils.captureScreenshot(driver, "JunitScreenshot");
 		}
 	}
 	  

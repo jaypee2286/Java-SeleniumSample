@@ -14,6 +14,7 @@ import java.util.concurrent.TimeUnit;
 import objectRepository.Base;
 import objectRepository.OR_Bing;
 
+import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.junit.rules.ErrorCollector;
 import org.openqa.selenium.WebDriver;
@@ -29,7 +30,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 import org.testng.Assert;
 
-import utility.ObjectUtils;
+import utility.Utils;
 import utility.Reporting;
 
 import com.relevantcodes.extentreports.*;
@@ -39,6 +40,7 @@ public class TestNG_TC001 {
 	public WebDriver driver;
 	public ErrorCollector err = new ErrorCollector();
 	public static final ExtentReports extent = com.relevantcodes.extentreports.ExtentReports.get(TestNG_TC001.class);
+	private static Logger Log = Logger.getLogger(Logger.class.getName());
 	
 	@BeforeClass
 	public void initDriver() throws Exception {
@@ -57,16 +59,13 @@ public class TestNG_TC001 {
 	
 	
 	@Test
-	public void main() {
-		extent.startTest("TC001A");
+	public void TestNG_TC001A() {
+		extent.startTest("TestNG_TC001");
 		extent.log(LogStatus.INFO, "INFO", "Starting test.");
 		extent.log(LogStatus.PASS, "Step 1", "Step 1 PASSED.");
 		extent.log(LogStatus.PASS, "Step 2", "Step 2 PASSED.");
 		extent.log(LogStatus.PASS, "Step 3", "Step 3 PASSED.");
-		extent.log(LogStatus.FAIL, "Step 4", "Step 4 FAILED.");
-		ObjectUtils.captureScreenshot(driver, "screenshot");
-		extent.attachScreenshot(".\\screenshot.png", "SCREENSHOT");
-		//extent.log(LogStatus.FAIL, "Step Name 5", "Step 5 FAILED", ".\\screenshot.png");
+		Reporting.addFail(extent, Log, "Step 4 FAILED!");
 		extent.endTest();
 		extent.startTest("TC001B");
 		extent.log(LogStatus.PASS, "Step 1", "This is a description of the step.");
@@ -76,39 +75,6 @@ public class TestNG_TC001 {
 		extent.log(LogStatus.PASS, "Step 5", "This is a description of the step.");
 		extent.log(LogStatus.PASS, "Step 6", "This is a description of the step.");
 	}
-	
-//	
-//	@Test 
-//	public void bingTest() throws Exception {
-//		try {
-//			extent.startTest("Bing Test");
-//			//Navigate to www.bing.com
-//			driver.get("http://www.bing.com/");
-//			Reporter.log("Navigated to www.bing.com");
-//			extent.log(LogStatus.INFO, "Navigated to BING");
-//			
-//			//Type in Google Chrome in the search bar, then click the search button
-//			OR_Bing.field_Search().sendKeys("Google Chrome");
-//			OR_Bing.button_Search().click();
-//			Reporter.log("Inputted 'Google Chrome' in the search field and clicked the search button.");
-//			extent.log(LogStatus.INFO, "Inputted 'Google Chrome' in the search field and clicked the search button");
-//			
-//			//Verify that the 'Sign In' link is present using Assert
-//			Assert.assertTrue(ObjectUtils.verifyObj(OR_Bing.Links.link_SignIn), "'Sign In' link does not exist!");
-//			Reporter.log("Verified 'Sign In' link loaded.");
-//			extent.log(LogStatus.PASS, "Verified 'Sign In' link loaded.");
-//			ObjectUtils.captureScreenshot(driver);
-//			extent.attachScreenshot(".\\screenshot.png", "Verified 'Sign In' link loaded.");
-//			
-//			//Verify that the results are present using ExpectedConditions
-//			new WebDriverWait(driver, 5).until(ExpectedConditions.presenceOfElementLocated(OR_Bing.resultsBox));
-//			Reporter.log("Verified search results box loaded.");
-//			//extent.endTest();
-//			
-//		} catch (Exception e) {
-//			ObjectUtils.captureScreenshot(driver);
-//		}
-//	}
 	
 	@AfterMethod
 	public void afterMethod() throws Exception {
